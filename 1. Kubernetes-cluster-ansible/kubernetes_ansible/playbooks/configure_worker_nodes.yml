@@ -8,6 +8,7 @@
 
   - name: Joining worker nodes with kubernetes master
     shell: |
+     kubeadm reset
      cat join_token | tail -2 > out.sh
      chmod 755 out.sh
      sh out.sh
