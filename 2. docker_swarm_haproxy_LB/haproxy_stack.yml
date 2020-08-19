@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+    web1:
+        image: dockercloud/hello-world
+        ports:
+            - "81:80"
+        deploy:
+            replicas: 3
+
+    haproxy:
+        image: haproxy:2.0
+        volumes:
+            - "./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg"
+        ports:
+            - "80:80"
+        deploy:
+            placement:
+                constraints: [node.role == manager]
