@@ -16,3 +16,4 @@ networks:
 
 volumes:
   jenkins_data:
+  shoeb
