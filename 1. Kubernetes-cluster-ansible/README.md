@@ -24,12 +24,12 @@ Setup Instructions:
    
    once it is cloned, get into the directory
    
-   `cd kubernetes_ansible/jobs_config`
+   `cd BS_LAB_TEST/1.\ Kubernetes-cluster-ansible/kubernetes_ansible/`
 
 6. There is a file "hosts" available in "jobs_config" directory, Need to make entry as per your nodes.
-7. Need to update below two variables value in "env_variables" available in "jobs_config" directory as per your configuration.\
-   `ad_addr` (Must be IP of master node)\
-   `cidr_v` (Specify range of IP addresses for the pod network)
+7. need to update below parameters as per your host config in `env_variables` file\
+   `ad_addr`\
+   `cidr_v`
    
 9. Run "kubernetes_cluster_setup_with_common_tasks.yml" playbook to setup all nodes and kubernetes master configuration.
 
@@ -37,7 +37,7 @@ Setup Instructions:
    
 10. Run "kubernetes_worker_join_with_master.yml" playbook to join the worker nodes with kubernetes master node once the above tasks completed.
 
-      `ansible-playbook join_kubernetes_workers_nodes.yml`
+      `ansible-playbook kubernetes_worker_join_with_master.yml`
 
 11. Verify the configuration from master node.
 
