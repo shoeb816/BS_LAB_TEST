@@ -4,7 +4,10 @@ This repository can help to deploy a kubernetes cluster consisting of one master
 
 Setup Instructions:
 
-1. Make you servers ready (1 master and 2 worker nodes) using vagrant. For creating VMs please visit following below git repository:
+1. Make you servers ready (1 master and 2 worker nodes) using vagrant. Here i have provided those vagrant files folder wise. Please find the folder names as below:
+     a. `Kubernetes_master_vagrant_conf` for kubetnetes master host.\
+     b. `Kubernetes_worker1_vagrant_conf` for kubernetes worker1 host.\
+     c. `Kubernetes_worker2_vagrant_conf` for kubernetes worker2 host.\
 
 
 2. After servers are up please entry all hostname with corresponding IP addresses declared in above Vagrantfile /etc/hosts file for name resolution in all hosts.
